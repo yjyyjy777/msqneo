@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MySQL Info</title>
+    <style>
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .form-group {
+        margin: 10px 0px;
+        text-align: left;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"], input[type="password"] {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>MySQL Info</h1>
+      <form action="/" method="POST">
+        <div class="form-group">
+          <label for="host">Host:</label>
+          <input type="text" id="host" name="host" required>
+        </div>
+
+        <div class="form-group">
+          <label for="port">Port:</label>
+          <input type="text" id="port" name="port" required>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

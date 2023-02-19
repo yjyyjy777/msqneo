@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MySQL Info Result</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<h1>MySQL Info</h1>
+<h2>Connection Info</h2>
+<table>
+  <tr>
+    <th>Host</th>
+    <th>Port</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Connection</th>
+  </tr>
+  <tr>
+    <td>{{.mysqlInfo.Host}}</td>
+    <td>{{.mysqlInfo.Port}}</td>
+    <td>{{.mysqlInfo.Username}}</td>
+    <td>{{.mysqlInfo.Password}}</td>
+    <td>{{.mysqlInfo.Connection}}</td>
+  </tr>
+</table>
+<h2>Table Info</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Rows</th>
+    <th>Data Size</th>
+    <th>Index Size</th>
+  </tr>
+  {{range .mysqlInfo.Tables}}
+  <tr>
+    <td>{{.Name}}</td>
+    <td>{{.Rows}}</td>
+    <td>{{.DataSize}}</td>
+    <td>{{.IndexSize}}</td>
+  </tr>
+  {{end}}
+</table>
+</body>
+</html>
